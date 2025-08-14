@@ -1,0 +1,124 @@
+:root {
+  --header-bg: #4F46E5;
+  --header-txt: #fff;
+  --header-height: 80px;
+}
+
+.header {
+  background: var(--header-bg);
+  color: var(--header-txt);
+  position: relative;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  letter-spacing: -1px;
+}
+
+.nav-desktop {
+  display: none;
+}
+
+.nav-link {
+  margin: 0 13px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--header-txt);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.nav-link:hover {
+  opacity: 0.75;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 108;
+}
+.hamburger-bar {
+  background: var(--header-txt);
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  color: #000;
+  z-index: 110;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px 0 20px;
+  animation: slide-in 0.2s;
+}
+@keyframes slide-in {
+  from { right: -100vw; opacity: 0; }
+  to { right: 0; opacity: 1; }
+}
+.mobile-menu-close {
+  background: none;
+  border: none;
+  font-size: 2.3rem;
+  color: #000;
+  position: absolute;
+  right: 18px;
+  top: 15px;
+  cursor: pointer;
+}
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+}
+.mobile-menu-link {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.07rem;
+  margin: 22px 0;
+  font-weight: 500;
+  letter-spacing: 0.007em;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-desktop {
+    display: flex;
+  }
+  .mobile-menu {
+    display: none;
+  }
+}
