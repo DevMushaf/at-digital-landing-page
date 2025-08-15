@@ -1,12 +1,12 @@
 import React from 'react';
-import LaptopImage from '../assets/HeroSection.png';
+import laptopImage from '../assets/HeroSection.png';
 import '../index.css';
 
 const HeroComponent = () => {
   return (
     <div className="hero-container">
       <div className="workspace-image">
-        <img src={LaptopImage} alt="Workspace" />
+        <img src={laptopImage} alt="Workspace" />
       </div>
       
       <div className="content-section">

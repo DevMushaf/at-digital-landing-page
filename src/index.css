@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;700&display=swap');
 
 :root {
   --header-bg: #4F46E5;
@@ -274,5 +275,193 @@
 @media (min-width: 1440px) {
   .content-section {
     left: 120px;
+  }
+}
+
+/* Services */
+
+.services-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 20px;
+}
+
+.service-item:last-child {
+  margin-bottom: 0;
+}
+
+.service-image {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.service-content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.service-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+  color: #4F46E5;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.service-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.learn-more-btn {
+  background-color: #F28D35;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.learn-more-btn:hover {
+  background-color: #e07d2a;
+}
+
+/* Tablet Styles - 768px and up */
+@media (min-width: 768px) {
+  .services-section {
+    padding: 80px 40px;
+  }
+
+  .service-item {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+  }
+
+  .service-item.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .service-image {
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+
+  .service-content {
+    flex: 1;
+    text-align: left;
+    max-width: none;
+  }
+
+  .service-title {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+
+  .service-description {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Desktop Styles - 1024px and up */
+@media (min-width: 1024px) {
+  .services-section {
+    padding: 100px 60px;
+  }
+
+  .service-item {
+    gap: 80px;
+    margin-bottom: 120px;
+  }
+
+  .service-image {
+    flex: 0 0 350px;
+    max-width: 350px;
+  }
+
+  .service-title {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .service-description {
+    font-size: 18px;
+    margin-bottom: 28px;
+    max-width: 600px;
+  }
+
+  .learn-more-btn {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+}
+
+/* Large Desktop Styles - 1200px and up */
+@media (min-width: 1200px) {
+  .services-section {
+    padding: 120px 80px;
+  }
+
+  .services-container {
+    max-width: 1400px;
+  }
+
+  .service-item {
+    gap: 100px;
+    margin-bottom: 140px;
+  }
+
+  .service-image {
+    flex: 0 0 400px;
+    max-width: 400px;
+  }
+
+  .service-title {
+    font-size: 34px;
+    margin-bottom: 32px;
+  }
+
+  .service-description {
+    font-size: 19px;
+    margin-bottom: 32px;
+    max-width: 650px;
+  }
+
+  .learn-more-btn {
+    padding: 16px 28px;
+    font-size: 15px;
   }
 }
