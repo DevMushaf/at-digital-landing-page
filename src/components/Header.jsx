@@ -12,6 +12,8 @@ const navLinks = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const desktopNavLinks = navLinks.filter(link => link.label !== 'HOME');
+
   return (
     <header className="header">
       <div className="header-container">
@@ -25,7 +27,7 @@ export default function Header() {
 
         {/* Desktop/Tablet Menu */}
         <nav className="nav-desktop">
-          {navLinks.map((link) => (
+          {desktopNavLinks.map((link) => (
             <a className="nav-link" key={link.label} href={link.href}>{link.label}</a>
           ))}
         </nav>
